@@ -17,6 +17,7 @@ https://www.datacamp.com/community/tutorials/market-basket-analysis-r#code
 /* https://www.bayardo.org/ps/sigmod98.pdf  not that useful for basics
 https://rpubs.com/emzak208/281776 useful after consuming better practical examples */
 
+- Nice ways to talk about churning
 
-
-
+https://towardsdatascience.com/predict-customer-churn-with-r-9e62357d47b4
+https://medium.com/@rohitlal/customer-churn-prediction-model-using-logistic-regression-490525a78074
