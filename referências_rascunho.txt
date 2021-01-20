@@ -1,0 +1,22 @@
+- Useful resources
+iannimuliterno.github.io
+https://www.reddit.com/r/MachineLearning/comments/mhodz/data_scientist_vs_statistician/
+minha playlist de aulas de estatistica
+
+- All the material on mining rules
+
+http://www.ams.med.uni-goettingen.de/download/Steffen-Unkel/chap9.pdf
+https://en.wikipedia.org/wiki/Association_rule_learning  
+
+https://select-statistics.co.uk/blog/market-basket-analysis-understanding-customer-behaviour/
+http://r-statistics.co/Association-Mining-With-R.html
+https://www.analyticsvidhya.com/blog/2017/08/mining-frequent-items-using-apriori-algorithm/
+https://blog.revolutionanalytics.com/2019/02/sequential-pattern-mining-in-r.html
+http://proc.conisar.org/2011/pdf/1822.pdf
+https://www.datacamp.com/community/tutorials/market-basket-analysis-r#code
+/* https://www.bayardo.org/ps/sigmod98.pdf  not that useful for basics
+https://rpubs.com/emzak208/281776 useful after consuming better practical examples */
+
+
+
+
