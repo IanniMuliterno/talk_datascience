@@ -1,0 +1,171 @@
+---
+title: "Da Estatística para Ciência de Dados"
+#subtitle: "⚔<br/>with xaringan"
+author: "Ianní Muliterno"
+#institute: "RStudio, PBC"
+date: "`r Sys.Date()`"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+#    chakra: libs/remark-latest.min.js
+    css: ["css/default.css", "css/mmp.css" , "css/mmp-fonts.css"]
+    lib_dir: libs
+    nature:
+      beforeInit: "https://platform.twitter.com/widgets.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+layout: true
+  
+<div class="my-footer"><span>
+
+<a href="https://iannimuliterno.github.io">Ianní Muliterno</a> - Email: <a href="mailto:iwmb1@ufpe.br">iwmb1@ufpe.br</a>
+</span></div>
+
+
+---
+class: middle
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = FALSE, fig.align = "center", message=FALSE, warning=FALSE, cache = TRUE)
+```
+
+```{r}
+library(knitr)
+library(tidyverse)
+library(widgetframe)
+library(kableExtra)
+```
+
+# Ianní Muliterno
+- Graduada em estatística - UFPE.
+- Cientista de dados 
+- Membro - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) 
+  
+```{r, out.width="80%"}
+knitr::include_graphics("https://github.com/rladies/starter-kit/raw/master/logo/R-LadiesGlobal_RBG_online_LogoWithText_Horizontal.png")
+```
+
+
+- [Currículo disponível neste link](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
+
+---
+class: middle
+
+# "A profissão do futuro"
+ 
+```{r, out.width="100%", fig.cap="<center><b>Fonte: Emerging jobs report  U.S 2020 - Linkedin.  <a href='https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/emerging-jobs-report/Emerging_Jobs_Report_U.S._FINAL.pdf'> Disponível neste link</a>"}
+knitr::include_graphics("img/linkedin/us_jobs_trends.png")
+```
+<!-- regular html comment --> 
+---
+class: middle
+
+# "A profissão do futuro"
+ 
+```{r, out.width="100%", fig.cap="<center><b>Fonte: Relatório de profissões em ascensão no Brasil em 2020 - Linkedin.  <a href='https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/emerging-jobs-report/Emerging_Jobs_Report_Brazil.pdf'> Disponível neste link</a>"}
+knitr::include_graphics("img/linkedin/br_jobs_trends.png")
+```
+---
+class: middle
+
+# O Cientista de dados 
+ 
+```{r, out.width="70%"}
+knitr::include_graphics("https://img.freepik.com/free-photo/white-dabbing-unicorn-with-boom-comic-text-blue-backdrop_23-2147948759.jpg?size=338&ext=jpg")
+```
+---
+class: middle
+
+# O Cientista de dados 
+ 
+```{r, out.width="100%", fig.cap="<center><b>Ilustração por Allison Horst - Twitter: <a href='https://twitter.com/allison_horst/'> @allison_horst</a> - Adaptado de WICKHAM & GROLEMUND, 2017</b></center>"}
+knitr::include_graphics("img/allisonhorst/data-analysis.jpg")
+```
+---
+class: middle
+# A profissão na prática
+- O objetivo aqui é mostrar situações com as quais já lidei, correlacionando o trabalho com disciplinas da estatística ou computação, como incentivo e direcionamento para quem tem interesse na profissão
+---
+class: middle
+# Market basket Analysis
+
+- Utiliza regras de associação: ferramenta que busca correlação entre itens ou conjuntos de itens que podem ser difíceis de detectar, especialmente em bancos muito grandes.
+
+- Personalizar desconto e ajustar localização de itens na prateleira são exemplos comuns de aplicação.
+
+- Suponha que existe um conjunto $I = {i_1, . . . , i_p}$ de $p$ itens binários e um conjunto de transações $D = {t_1, . . . ,t_n}$ com $n$ transações. Cada transação tem uma chave de identificação (ID) única e consiste num subconjunto dos itens em $I$.
+
+- Exemplo : $I = {leite, manteiga, cerveja, fraldas}$.
+$D =$
+
+```{r}
+data.frame(ID = 1:5,leite = rbinom(5,1,1/3), manteiga = rbinom(5,1,1/4), cerveja = rbinom(5,1,1/2), fraldas = rbinom(5,1,1/4) ) %>% kable() %>%  kable_styling(full_width = F)
+```
+---
+class: middle
+# Performance de algorítmos 
+```{r, echo = TRUE}
+library(data.table)
+library(dplyr)
+library(purrr) # For map() function
+library(microbenchmark) # For benchmarking
+library(tidyverse)
+
+dfs <- rep(2e3,10)
+
+set.seed(123456)
+myList <- map(dfs,   #amostra de 20kk de valores no range de 1:1e5, 10 vezes
+              base::sample,
+              x = 1:1e5,
+              replace = TRUE) %>%
+  map(matrix,  # em cada posicao da lista, quebra o vetor em 10 e joga cada parte como coluna de uma matriz
+      ncol = 10) %>%
+  map(data.frame)  # transforma todas matrizes da lista em data.frames
+  
+  df3 <- data.table::rbindlist(myList) # une as bases na lista
+```
+<!-- Lembrar de mudar os valores referentes ao tamanho da tabela no código --> 
+---
+class: middle
+# Churn Analysis
+
+- case de machine learning (envolve desde análise descritiva a tratamento de variáveis categóricas e numéricas com outliers e missing. Estes problemas devem ser resolvidos respeitando a distribuição das variáveis, por fim para análise de churn é necessária a analise dos betas da regressão e do odds ratio, considerando também uma métrica de desempenho para a valiar a performance do modelo [área sob curva ROC])
+---
+class: middle
+# O que esperar de uma entrevista e de um time de data science
+---
+class:  middle
+
+## Muchas Gracias!
+.pull-left[
+
+```{r, out.width="100%"}
+knitr::include_graphics("https://www.speakgif.com/wp-content/uploads/2015/09/thanks.gif")
+```
+]
+
+
+.pull-right[
+**Agradecimentos especiais**:
+- [Calitéia Santana de Sousa](http://www.de.ufpe.br/~caliteia/) - Pelo convite!
+- [Beatriz Milz](https://beatrizmilz.com/) - Por ~~ser uma fada~~ manjar muito de apresentações no R. 
+- [R-ladies](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) - Por ajudar jovens gafanhotos a codar e comunicar.
+
+]
+
+
+
+- **Contato**:
+
+  - Email: <a href="mailto:iwmb1@de.ufpe.br">iwmb1@de.ufpe.br</a>
+  - Webpage: https://iannimuliterno.github.io
+  - Github: <a href="http://github.com/iannimuliterno">@IanniMuliterno</a>
+  - Twitter: <a href="https://twitter.com/IMuliterno">@IMuliterno</a> 
+  - Linkedin: <a href="https://www.linkedin.com/in/ianní-muliterno">Ianní Muliterno</a>
+
+
+- Apresentação feita com [Xaringan](https://github.com/yihui/xaringan) . Código disponível [neste repositório](https://github.com/IanniMuliterno/talk_datascience).
+
+

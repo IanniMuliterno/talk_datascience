@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Da Estatística para Ciência de Dados</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Ianní Muliterno" />
+    <meta name="date" content="2021-01-28" />
+    <script src="libs/kePrint/kePrint.js"></script>
+    <link rel="stylesheet" href="css\default.css" type="text/css" />
+    <link rel="stylesheet" href="css\mmp.css" type="text/css" />
+    <link rel="stylesheet" href="css\mmp-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Da Estatística para Ciência de Dados
+### Ianní Muliterno
+### 2021-01-28
+
+---
+
+layout: true
+  
+&lt;div class="my-footer"&gt;&lt;span&gt;
+
+&lt;a href="https://iannimuliterno.github.io"&gt;Ianní Muliterno&lt;/a&gt; - Email: &lt;a href="mailto:iwmb1@ufpe.br"&gt;iwmb1@ufpe.br&lt;/a&gt;
+&lt;/span&gt;&lt;/div&gt;
+
+
+---
+class: middle
+
+
+
+
+# Ianní Muliterno
+- Graduada em estatística - UFPE.
+- Cientista de dados 
+- Membro - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) 
+  
+&lt;img src="https://github.com/rladies/starter-kit/raw/master/logo/R-LadiesGlobal_RBG_online_LogoWithText_Horizontal.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+- [Currículo disponível neste link](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
+
+---
+class: middle
+
+# "A profissão do futuro"
+ 
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/linkedin/us_jobs_trends.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: Emerging jobs report  U.S 2020 - Linkedin.  &amp;lt;a href='https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/emerging-jobs-report/Emerging_Jobs_Report_U.S._FINAL.pdf'&amp;gt; Disponível neste link&amp;lt;/a&amp;gt;" width="100%" /&gt;
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: Emerging jobs report  U.S 2020 - Linkedin.  &lt;a href='https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/emerging-jobs-report/Emerging_Jobs_Report_U.S._FINAL.pdf'&gt; Disponível neste link&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- regular html comment --&gt; 
+---
+class: middle
+
+# "A profissão do futuro"
+ 
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/linkedin/br_jobs_trends.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: Relatório de profissões em ascensão no Brasil em 2020 - Linkedin.  &amp;lt;a href='https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/emerging-jobs-report/Emerging_Jobs_Report_Brazil.pdf'&amp;gt; Disponível neste link&amp;lt;/a&amp;gt;" width="100%" /&gt;
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: Relatório de profissões em ascensão no Brasil em 2020 - Linkedin.  &lt;a href='https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/emerging-jobs-report/Emerging_Jobs_Report_Brazil.pdf'&gt; Disponível neste link&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+---
+class: middle
+
+# O Cientista de dados 
+ 
+&lt;img src="https://img.freepik.com/free-photo/white-dabbing-unicorn-with-boom-comic-text-blue-backdrop_23-2147948759.jpg?size=338&amp;ext=jpg" width="70%" style="display: block; margin: auto;" /&gt;
+---
+class: middle
+
+# O Cientista de dados 
+ 
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/allisonhorst/data-analysis.jpg" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Ilustração por Allison Horst - Twitter: &amp;lt;a href='https://twitter.com/allison_horst/'&amp;gt; @allison_horst&amp;lt;/a&amp;gt; - Adaptado de WICKHAM &amp;amp; GROLEMUND, 2017&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="100%" /&gt;
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Ilustração por Allison Horst - Twitter: &lt;a href='https://twitter.com/allison_horst/'&gt; @allison_horst&lt;/a&gt; - Adaptado de WICKHAM &amp; GROLEMUND, 2017&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;/div&gt;
+---
+class: middle
+# A profissão na prática
+- O objetivo aqui é mostrar situações com as quais já lidei, correlacionando o trabalho com disciplinas da estatística ou computação, como incentivo e direcionamento para quem tem interesse na profissão
+---
+class: middle
+# Market basket Analysis
+
+- Suponha que existe um conjunto `\(I = {i_1, . . . , i_p}\)` de `\(p\)` itens binários e um conjunto de transações `\(D = {t_1, . . . ,t_n}\)` com `\(n\)` transações. Cada transação tem uma chave de identificação (ID) única e consiste num subconjunto dos itens em `\(I\)`.
+
+- Exemplo : `\(I = {leite, manteiga, cerveja, fraldas}\)`.
+`\(D =\)`
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:right;"&gt; ID &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; leite &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; manteiga &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; cerveja &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; fraldas &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+---
+class: middle
+# Performance de algorítmos 
+
+```r
+library(data.table)
+library(dplyr)
+library(purrr) # For map() function
+library(microbenchmark) # For benchmarking
+library(tidyverse)
+
+dfs &lt;- rep(2e3,10)
+
+set.seed(123456)
+myList &lt;- map(dfs,   #amostra de 20kk de valores no range de 1:1e5, 10 vezes
+              base::sample,
+              x = 1:1e5,
+              replace = TRUE) %&gt;%
+  map(matrix,  # em cada posicao da lista, quebra o vetor em 10 e joga cada parte como coluna de uma matriz
+      ncol = 10) %&gt;%
+  map(data.frame)  # transforma todas matrizes da lista em data.frames
+  
+  df3 &lt;- data.table::rbindlist(myList) # une as bases na lista
+```
+&lt;!-- Lembrar de mudar os valores referentes ao tamanho da tabela no código --&gt; 
+---
+class: middle
+# Churn Analysis
+
+- case de machine learning (envolve desde análise descritiva a tratamento de variáveis categóricas e numéricas com outliers e missing. Estes problemas devem ser resolvidos respeitando a distribuição das variáveis, por fim para análise de churn é necessária a analise dos betas da regressão e do odds ratio, considerando também uma métrica de desempenho para a valiar a performance do modelo [área sob curva ROC])
+---
+class: middle
+# O que esperar de uma entrevista e de um time de data science
+---
+class:  middle
+
+## Muchas Gracias!
+.pull-left[
+
+&lt;img src="https://www.speakgif.com/wp-content/uploads/2015/09/thanks.gif" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+
+.pull-right[
+**Agradecimentos especiais**:
+- [Calitéia Santana de Sousa](http://www.de.ufpe.br/~caliteia/) - Pelo convite!
+- [Beatriz Milz](https://beatrizmilz.com/) - Por ~~ser uma fada~~ manjar muito de apresentações no R. 
+- [R-ladies](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) - Por ajudar jovens gafanhotos a codar e comunicar.
+
+]
+
+
+
+- **Contato**:
+
+  - Email: &lt;a href="mailto:iwmb1@de.ufpe.br"&gt;iwmb1@de.ufpe.br&lt;/a&gt;
+  - Webpage: https://iannimuliterno.github.io
+  - Github: &lt;a href="http://github.com/iannimuliterno"&gt;@IanniMuliterno&lt;/a&gt;
+  - Twitter: &lt;a href="https://twitter.com/IMuliterno"&gt;@IMuliterno&lt;/a&gt; 
+  - Linkedin: &lt;a href="https://www.linkedin.com/in/ianní-muliterno"&gt;Ianní Muliterno&lt;/a&gt;
+
+
+- Apresentação feita com [Xaringan](https://github.com/yihui/xaringan) . Código disponível [neste repositório](https://github.com/IanniMuliterno/talk_datascience).
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  /* Replace <script> tags in slides area to make them executable
+   *
+   * Runs after post-processing of markdown source into slides and replaces only
+   * <script>s on the last slide of continued slides using the .has-continuation
+   * class added by xaringan. Finally, any <script>s in the slides area that
+   * aren't executed are commented out.
+   */
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+  var scriptsNotExecuted = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container.has-continuation script'
+  );
+  if (!scriptsNotExecuted.length) return;
+  for (var i = 0; i < scriptsNotExecuted.length; i++) {
+    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
+    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
