@@ -4,11 +4,12 @@
     <title>Da Estatística para Ciência de Dados</title>
     <meta charset="utf-8" />
     <meta name="author" content="Ianní Muliterno" />
-    <meta name="date" content="2021-01-28" />
+    <meta name="date" content="2021-02-04" />
     <script src="libs/kePrint/kePrint.js"></script>
-    <link rel="stylesheet" href="css\default.css" type="text/css" />
-    <link rel="stylesheet" href="css\mmp.css" type="text/css" />
-    <link rel="stylesheet" href="css\mmp-fonts.css" type="text/css" />
+    <link href="libs/lightable/lightable.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/mmp.css" type="text/css" />
+    <link rel="stylesheet" href="css/mmp-fonts.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -16,7 +17,7 @@ class: center, middle, inverse, title-slide
 
 # Da Estatística para Ciência de Dados
 ### Ianní Muliterno
-### 2021-01-28
+### 2021-02-04
 
 ---
 
@@ -24,7 +25,7 @@ layout: true
   
 &lt;div class="my-footer"&gt;&lt;span&gt;
 
-&lt;a href="https://iannimuliterno.github.io"&gt;Ianní Muliterno&lt;/a&gt; - Email: &lt;a href="mailto:iwmb1@ufpe.br"&gt;iwmb1@ufpe.br&lt;/a&gt;
+&lt;a href="https://iannimuliterno.github.io"&gt;Ianní Muliterno&lt;/a&gt; - Email: &lt;a href="mailto:iwmb1@ufpe.br"&gt;iannimuliterno@gmail.com&lt;/a&gt;
 &lt;/span&gt;&lt;/div&gt;
 
 
@@ -36,19 +37,22 @@ class: middle
 
 # Ianní Muliterno
 - Graduada em estatística - UFPE.
-- Cientista de dados 
+- Cientista de dados - financeiro; inteligência de mercado
+- Parceira da NORTE Pesquisa
 - Membro - [R-Ladies São Paulo](https://www.meetup.com/pt-BR/R-Ladies-Sao-Paulo) 
-  
-&lt;img src="https://github.com/rladies/starter-kit/raw/master/logo/R-LadiesGlobal_RBG_online_LogoWithText_Horizontal.png" width="80%" style="display: block; margin: auto;" /&gt;
+ 
+ .pull-left[
+&lt;img src="https://github.com/rladies/starter-kit/raw/master/logo/R-LadiesGlobal_RBG_online_LogoWithText_Horizontal.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
 
 
-- [Currículo disponível neste link](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
 
 ---
 class: middle
 
-# "A profissão do futuro"
- 
+- "A ciência de dados está crescendo e começando a substituir ocupações históricas"
+- "Cientistas de dados estão fazendo mais atividades tradicionalmente feita por estatísticos"
+
 &lt;div class="figure" style="text-align: center"&gt;
 &lt;img src="img/linkedin/us_jobs_trends.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: Emerging jobs report  U.S 2020 - Linkedin.  &amp;lt;a href='https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/emerging-jobs-report/Emerging_Jobs_Report_U.S._FINAL.pdf'&amp;gt; Disponível neste link&amp;lt;/a&amp;gt;" width="100%" /&gt;
 &lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: Emerging jobs report  U.S 2020 - Linkedin.  &lt;a href='https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/emerging-jobs-report/Emerging_Jobs_Report_U.S._FINAL.pdf'&gt; Disponível neste link&lt;/a&gt;&lt;/p&gt;
@@ -57,7 +61,8 @@ class: middle
 ---
 class: middle
 
-# "A profissão do futuro"
+- "5º lugar dentre as profissões que mais cresceram"
+- "Crescimento anual médio de 78%  (2015-2019)"
  
 &lt;div class="figure" style="text-align: center"&gt;
 &lt;img src="img/linkedin/br_jobs_trends.png" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Fonte: Relatório de profissões em ascensão no Brasil em 2020 - Linkedin.  &amp;lt;a href='https://business.linkedin.com/content/dam/me/business/en-us/talent-solutions/emerging-jobs-report/Emerging_Jobs_Report_Brazil.pdf'&amp;gt; Disponível neste link&amp;lt;/a&amp;gt;" width="100%" /&gt;
@@ -71,22 +76,55 @@ class: middle
 &lt;img src="https://img.freepik.com/free-photo/white-dabbing-unicorn-with-boom-comic-text-blue-backdrop_23-2147948759.jpg?size=338&amp;ext=jpg" width="70%" style="display: block; margin: auto;" /&gt;
 ---
 class: middle
-
 # O Cientista de dados 
- 
+.pull-left[
+- **Arquitetura de dados; Engenharia de dados** 
+   
+   Estruturar, limpar e manipular
+
+- **Modelagem; Data Science**
+   
+   Criar, Inovar e prever 
+       
+- **BI; Data analytics**
+   
+   Descobrir, Descrever e reportar
+   
+- **Diferenças principais entre Jr. Pl. e Sr.**
+]
+
+.pull-right[ 
 &lt;div class="figure" style="text-align: center"&gt;
 &lt;img src="img/allisonhorst/data-analysis.jpg" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Ilustração por Allison Horst - Twitter: &amp;lt;a href='https://twitter.com/allison_horst/'&amp;gt; @allison_horst&amp;lt;/a&amp;gt; - Adaptado de WICKHAM &amp;amp; GROLEMUND, 2017&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="100%" /&gt;
 &lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Ilustração por Allison Horst - Twitter: &lt;a href='https://twitter.com/allison_horst/'&gt; @allison_horst&lt;/a&gt; - Adaptado de WICKHAM &amp; GROLEMUND, 2017&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
+]
+&lt;!-- 
+no topico data science. criar se refere a criar metricas. Citar os labs e como isso pode separar um cientista de dados de lab e um de modelagem
+em comunicar, citar o itau e sua pratica de workshops e apresentações internas--&gt; 
 ---
 class: middle
-# A profissão na prática
-- O objetivo aqui é mostrar situações com as quais já lidei, correlacionando o trabalho com disciplinas da estatística ou computação, como incentivo e direcionamento para quem tem interesse na profissão
+# Um pouco da profissão na prática
+&lt;!--
+- O objetivo aqui é correlacionar o trabalho com disciplinas da estatística ou computação, como incentivo e direcionamento para quem tem interesse na profissão
+--&gt;
 ---
 class: middle
-# Market basket Analysis
+# Market basket Analysis (MBA)
 
-- Suponha que existe um conjunto `\(I = {i_1, . . . , i_p}\)` de `\(p\)` itens binários e um conjunto de transações `\(D = {t_1, . . . ,t_n}\)` com `\(n\)` transações. Cada transação tem uma chave de identificação (ID) única e consiste num subconjunto dos itens em `\(I\)`.
+- **Objetivo:**Personalizar desconto e ajustar localização de itens na prateleira são exemplos comuns de aplicação.
+
+- **Metodologia:**Utiliza regras de associação: ferramenta que busca correlação entre itens ou conjuntos de itens que podem ser difíceis de detectar, especialmente em bancos muito grandes.
+
+- **Disciplinas relacionadas :**Algebra Linear e probabilidade.
+
+- **Ponto de partida:**Suponha que existe um conjunto `\(I = {i_1, . . . , i_p}\)` de `\(p\)` itens binários e um conjunto de transações `\(D = {t_1, . . . ,t_n}\)` com `\(n\)` transações. Cada transação tem uma chave de identificação (ID) única e consiste num subconjunto dos itens em `\(I\)`.
+
+
+---
+class: middle
+# Market basket Analysis (MBA)
+
 
 - Exemplo : `\(I = {leite, manteiga, cerveja, fraldas}\)`.
 `\(D =\)`
@@ -104,43 +142,296 @@ class: middle
 &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 2 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 3 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:right;"&gt; 5 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 0 &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+Uma regra de associação considera a relação `\(X ⇒ Y\)` (Y é consequência de X) e para encontrar regras relevantes analisamos o conjunto de partes `\(P(I)\)` que no nosso exemplo pode ser :
+
+&lt;table class="table" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; LHS &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; RHS &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; leite &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; fralda &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; manteiga &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; fralda &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; cerveja,leite &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; manteiga &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; cerveja,manteiga &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; leite &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; manteiga, leite &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; cerveja &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+LHS : Left-hand-side,
+RHS : Right-hand-side.
+&lt;!-- como remover regras repetidas? 
+ me levou a pensar num exemplo, pegamos a de maior confiança de podemos usar o lift para estimar o ganho possível ao explorar aquela regra--&gt; 
 ---
 class: middle
+# Market basket Analysis (MBA)
+
+As 3 estatísticas mais populares do MBA são, suporte, confiança e lift. Considerando a regra  `\(X ⇒ Y\)` obtida ao observar uma matriz de `\(n\)` transações, temos:
+
+ - `\(suporte = P(X \cap Y)\)` 
+ 
+ Frequência de X e Y nas mesmas transações.  
+ 
+ - `\(confiança = P(Y|X) = P(X \cap Y)/P(X)\)`
+ 
+  Frequência de X e Y nas mesmas transações/ frequência transações que contém X
+
+
+ - `\(lift = P(X \cap Y)/P(X)P(Y)\)`
+ 
+ termômetro de independência.
+
+- encontrando limites mínimos de suporte e confiança
+
+---
+class: middle
+# MBA no R
+
+- Apriori algorithm [algorítmo para grafos, busca em largura ou breadth-first search (BFS)](https://www.ime.usp.br/~pf/algoritmos_para_grafos/aulas/bfs.html)
+ Usa busca em largura para contar o suporte dos conjuntos de itens e é capaz de obter o suporte de cada regra sem verificar toda a base.
+
+```r
+library(arules)
+library(arulesViz)
+
+compras &lt;- data.frame(ID_transaction = sample(1:100,700,replace = T),
+                      Item = sample(fruit,700,replace = T))
+
+compras %&gt;% arrange(ID_transaction) %&gt;% head()
+```
+
+```
+##   ID_transaction        Item
+## 1              1 salal berry
+## 2              1 dragonfruit
+## 3              1  watermelon
+## 4              1      papaya
+## 5              1 dragonfruit
+## 6              1     avocado
+```
+
+```r
+#write.csv(compras,"healthy_eating.csv")
+```
+---
+class: middle
+# MBA no R
+
+
+```r
+order_trans &lt;- read.transactions(
+  file = "healthy_eating.csv",
+  format = "single",
+  sep = ",",
+  cols=c("ID_transaction","Item"),
+  rm.duplicates = T,
+  header = T
+)
+```
+
+
+```r
+class(order_trans)
+```
+
+```
+## [1] "transactions"
+## attr(,"package")
+## [1] "arules"
+```
+
+&lt;!--
+https://select-statistics.co.uk/blog/market-basket-analysis-understanding-customer-behaviour/
+--&gt;
+---
+class: middle
+# Visão geral das transações
+
+```r
+data("Groceries")
+summary(Groceries)
+```
+
+```
+## transactions as itemMatrix in sparse format with
+##  9835 rows (elements/itemsets/transactions) and
+##  169 columns (items) and a density of 0.02609146 
+## 
+## most frequent items:
+##       whole milk other vegetables       rolls/buns             soda 
+##             2513             1903             1809             1715 
+##           yogurt          (Other) 
+##             1372            34055 
+## 
+## element (itemset/transaction) length distribution:
+## sizes
+##    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16 
+## 2159 1643 1299 1005  855  645  545  438  350  246  182  117   78   77   55   46 
+##   17   18   19   20   21   22   23   24   26   27   28   29   32 
+##   29   14   14    9   11    4    6    1    1    1    1    3    1 
+## 
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   1.000   2.000   3.000   4.409   6.000  32.000 
+## 
+## includes extended item information - examples:
+##        labels  level2           level1
+## 1 frankfurter sausage meat and sausage
+## 2     sausage sausage meat and sausage
+## 3  liver loaf sausage meat and sausage
+```
+
+
+---
+class: middle
+#Procurando por associações
+
+```r
+ rules &lt;- apriori(Groceries, parameter=list(support=0.001, confidence=0.5))
+```
+
+```
+## Apriori
+## 
+## Parameter specification:
+##  confidence minval smax arem  aval originalSupport maxtime support minlen
+##         0.5    0.1    1 none FALSE            TRUE       5   0.001      1
+##  maxlen target  ext
+##      10  rules TRUE
+## 
+## Algorithmic control:
+##  filter tree heap memopt load sort verbose
+##     0.1 TRUE TRUE  FALSE TRUE    2    TRUE
+## 
+## Absolute minimum support count: 9 
+## 
+## set item appearances ...[0 item(s)] done [0.00s].
+## set transactions ...[169 item(s), 9835 transaction(s)] done [0.01s].
+## sorting and recoding items ... [157 item(s)] done [0.00s].
+## creating transaction tree ... done [0.00s].
+## checking subsets of size 1 2 3 4 5 6 done [0.01s].
+## writing ... [5668 rule(s)] done [0.00s].
+## creating S4 object  ... done [0.00s].
+```
+
+---
+class: middle
+#Procurando por associações
+
+```r
+rules
+```
+
+```
+## set of 5668 rules
+```
+
+
+```r
+ inspect(head(rules, n = 3, by ="lift"))
+```
+
+```
+##     lhs                             rhs              support     confidence
+## [1] {Instant food products,soda} =&gt; {hamburger meat} 0.001220132 0.6315789 
+## [2] {soda,popcorn}               =&gt; {salty snack}    0.001220132 0.6315789 
+## [3] {flour,baking powder}        =&gt; {sugar}          0.001016777 0.5555556 
+##     coverage    lift     count
+## [1] 0.001931876 18.99565 12   
+## [2] 0.001931876 16.69779 12   
+## [3] 0.001830198 16.40807 10
+```
+---
+class: middle
+# Visão geral das regras de acordo com suporte e confiança
+- é possível usar `plot(rules, engine = 'interactive')` para explorar regras que parecem importantes no gráfico.
+
+```r
+library(plotly)
+bylift_top20 &lt;- head(rules, n = 20, by ="lift")
+#plot(bylift_top20, method = "graph", engine = "htmlwidget")
+```
+---
+class: middle
+&lt;img src="slide_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" /&gt;
+&lt;!--
+awesome viz
+https://www.researchgate.net/profile/Michael_Hahsler/publication/323081337_arulesViz_Interactive_Visualization_of_Association_Rules_with_R/links/5b228173a6fdcc6974602340/arulesViz-Interactive-Visualization-of-Association-Rules-with-R.pdf
+--&gt;
+---
+class: middle
+# Performance de algorítmos 
+
+
+- **Objetivo :** Comparar performance das sintaxes dplyr e data.table num exercício                    de manipulação de bases.
+- **Motivação :** Refletir sobre até que ponto o dplyr é maravilhoso.
+- **Metodologia:** Utilizar o pacote "microbenchmark" para comparar a performance de uma mesma atividade, realizada com sintaxes diferentes, considerando como métricas principais de performance tempo e estabilidade da execução.
+- **Disciplinas relacionadas :**Análise de algorítmo.
+
+## A beleza do dplyr:
+
+&lt;img src="img/sql_dplyr.jfif" width="60%" style="display: block; margin: auto;" /&gt;
+
+&lt;!--
+breve descricao de dplyr e data.table para contextualização 
+dplyr usado para pregação de palavra enquanto data.table pode ser mais convidativo em atividades mais avançadas
+--&gt;
+
+---
+class: middle
+
 # Performance de algorítmos 
 
 ```r
@@ -150,28 +441,135 @@ library(purrr) # For map() function
 library(microbenchmark) # For benchmarking
 library(tidyverse)
 
-dfs &lt;- rep(2e3,10)
+dfs &lt;- rep(2e4,10)
 
 set.seed(123456)
-myList &lt;- map(dfs,   #amostra de 20kk de valores no range de 1:1e5, 10 vezes
+myList &lt;- map(dfs,   #amostra de 20k valores no range de 1:1e5, 10 vezes
               base::sample,
               x = 1:1e5,
               replace = TRUE) %&gt;%
   map(matrix,  # em cada posicao da lista, quebra o vetor em 10 e joga cada parte como coluna de uma matriz
       ncol = 10) %&gt;%
-  map(data.frame)  # transforma todas matrizes da lista em data.frames
+  map(data.frame) #temos uma lista contendo 10 data.frames com 10 colunas e 20mil linhas cada
+
   
-  df3 &lt;- data.table::rbindlist(myList) # une as bases na lista
+df3 &lt;- data.table::rbindlist(myList) # une as bases na lista
+head(df3, n=3)
+```
+
+```
+##       X1    X2    X3    X4    X5    X6    X7    X8    X9   X10
+## 1: 87921 67797 19960 14742 21118 22127 23708 55642 72404 21406
+## 2: 78535 45529 77448  7669 37977 61129 10643 78765 68194 62427
+## 3:  6326 10275 72594 71576 90666 45222 53499 48131 41455 10964
 ```
 &lt;!-- Lembrar de mudar os valores referentes ao tamanho da tabela no código --&gt; 
 ---
 class: middle
-# Churn Analysis
+Agora suponha que estamos na fase de dataPrep desta base, tentando descobrir coisas sobre ela como : “ Qual o valor minimo de X3 agrupado por X1?”. Vamos escrever isso em dplyr e datatable.
+.pull-left[
 
-- case de machine learning (envolve desde análise descritiva a tratamento de variáveis categóricas e numéricas com outliers e missing. Estes problemas devem ser resolvidos respeitando a distribuição das variáveis, por fim para análise de churn é necessária a analise dos betas da regressão e do odds ratio, considerando também uma métrica de desempenho para a valiar a performance do modelo [área sob curva ROC])
+```r
+ # escrevendo em datatable 
+teste1 &lt;- df3[,.(min_X3 = min(X3)),.(X1)][order(X1)]
+teste1 %&gt;% head(n=5)
+```
+
+```
+##    X1 min_X3
+## 1:  3  75452
+## 2: 35  71241
+## 3: 42  68585
+## 4: 62  37458
+## 5: 63     45
+```
+]
+
+.pull-right[
+
+```r
+# escrevendo em dplyr
+teste2 &lt;- df3 %&gt;% 
+          group_by(X1) %&gt;%
+          summarize(min_X3 = min(X3))
+          
+teste2 %&gt;% head(n=5)
+```
+
+```
+## # A tibble: 5 x 2
+##      X1 min_X3
+##   &lt;int&gt;  &lt;int&gt;
+## 1     3  75452
+## 2    35  71241
+## 3    42  68585
+## 4    62  37458
+## 5    63     45
+```
+]
+
+
+```r
+# conferindo se as saídas são iguais          
+all.equal(teste1,as.data.table(teste2))
+```
+
+```
+## [1] TRUE
+```
+&lt;!-- detalhes : https://iannimuliterno.github.io/2019-09-26-dt-luv/ --&gt; 
 ---
 class: middle
-# O que esperar de uma entrevista e de um time de data science
+Agora que já sabemos como gerar a mesma operação por grupo nos dois pacotes, vamos comparar o desempenho com microbenchmark, esta função executa uma expressão um dado número de vezes e conta o tempo gasto em cada iteração. Para esse caso, foram feitas 100 execuções de cada expressão.
+
+```r
+ time_champs &lt;- microbenchmark({
+ df3[,.(min_X3 = min(X3)),.(X1)][order(X1)]
+ }, times = 100L)
+
+time_nonchamps &lt;- microbenchmark({
+    df3 %&gt;% 
+    group_by(X1) %&gt;%
+    summarize(min_X3 = min(X3))
+    }, times = 100L)
+```
+
+---
+class: middle
+.pull-left[
+&lt;img src="slide_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+&lt;img src="slide_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+```r
+mean(time_nonchamps$time)/mean(time_champs$time)
+```
+
+```
+## [1] 5.822421
+```
+
+---
+class: middle
+# Impressões sobre recrutamento e times de data science
+.pull-left[
+- **O que os recrutadores geralmente procuram**
+- **Como procuram **
+
+Entrevistas
+
+Testes
+]
+
+.pull-right[
+- **Composição da equipe**
+- **Tipos de gestão**
+
+Mudança no perfil dos gestores em algumas áreas
+]
+
 ---
 class:  middle
 
@@ -194,7 +592,7 @@ class:  middle
 
 - **Contato**:
 
-  - Email: &lt;a href="mailto:iwmb1@de.ufpe.br"&gt;iwmb1@de.ufpe.br&lt;/a&gt;
+  - Email: &lt;a href="mailto:iannimuliterno@gmail.com"&gt;iannimuliterno@gmail.com&lt;/a&gt;
   - Webpage: https://iannimuliterno.github.io
   - Github: &lt;a href="http://github.com/iannimuliterno"&gt;@IanniMuliterno&lt;/a&gt;
   - Twitter: &lt;a href="https://twitter.com/IMuliterno"&gt;@IMuliterno&lt;/a&gt; 
@@ -252,30 +650,20 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
 })();
 (function() {
   "use strict"
-  /* Replace <script> tags in slides area to make them executable
-   *
-   * Runs after post-processing of markdown source into slides and replaces only
-   * <script>s on the last slide of continued slides using the .has-continuation
-   * class added by xaringan. Finally, any <script>s in the slides area that
-   * aren't executed are commented out.
-   */
+  // Replace <script> tags in slides area to make them executable
   var scripts = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container:not(.has-continuation) script'
+    '.remark-slides-area .remark-slide-container script'
   );
   if (!scripts.length) return;
   for (var i = 0; i < scripts.length; i++) {
     var s = document.createElement('script');
     var code = document.createTextNode(scripts[i].textContent);
     s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
     scripts[i].parentElement.replaceChild(s, scripts[i]);
-  }
-  var scriptsNotExecuted = document.querySelectorAll(
-    '.remark-slides-area .remark-slide-container.has-continuation script'
-  );
-  if (!scriptsNotExecuted.length) return;
-  for (var i = 0; i < scriptsNotExecuted.length; i++) {
-    var comment = document.createComment(scriptsNotExecuted[i].outerHTML)
-    scriptsNotExecuted[i].parentElement.replaceChild(comment, scriptsNotExecuted[i])
   }
 })();
 (function() {
