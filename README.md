@@ -19,3 +19,5 @@ Roteiro
  mudança no curriculo de liderança de um time de data science
 
  Academia X mercado de trabalho
+ 
+ Obs: O código da apresentação está na pasta zipada, se tiver algum problema para reproduzir pode entrar em contato.
