@@ -1,6 +1,7 @@
 # jornada cientifica ufpe 2021 - datascience
 
 O objetivo deste repositório é armazenar os slides da apresentação "Da Estatística para Ciência de Dados" para a Jornada Científica de Probabilidade e Estatística da UFPE.
+[Slides](https://iannimuliterno.github.io/talk_datascience/slide.html)
 
 Roteiro
 
